@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relation Between Street-Sign Work Orders with NYCT Collision Data</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="visualizationLab3.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Relation Between Street-Sign Work Orders with NYCT Collision Data - ADVANCED VISUALS</h1>
+    <p>
+        James Lam CSE 332
+        <br>This seeks to combine two separate data bases,
+        <br>Sign Work Orders: https://data.cityofnewyork.us/Transportation/Street-Sign-Work-Orders/qt6m-xctn
+        <br>Motor Vehicle Collisions: https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
+        <br>
+        <br>
+        Factorization is used to process data with Pearson's correlation index, please reference the following sheet for index referencing https://github.com/dudbas/Database-Visualization/blob/main/factorizationIndex.xlsx
+    </p>
+
+    <label for="graphs">Graph Type:</label>
+    <select name="graphs" id="graphs" onchange="visualize(this.value);">
+        <option value=""> </option>
+        <option value="correlation">Correlation Matrix</option>
+        <option value="scatter">Scatter Plot Matrix</option>
+        <option value="parallel">Parallel Coordinates</option>
+        <option value="pca">PCA Plot</option>
+        <option value="bi">Bi Plot</option>
+        <option value="mData">MDS Data</option>
+        <option value="mAttributes">MDS Attributes</option>
+    </select>
+<!--GRAPHING LOCATION-->
+    <div id="graphingLocation"></div>
+    <br>
+    <div id="graphingLocation1"></div>
+    <br>
+    <div id="graphingLocation2"></div>
+</body>
+</html>
